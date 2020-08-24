@@ -1,0 +1,91 @@
+.hamburger-wrap {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  width: 3rem;
+  height: 3rem;
+  z-index: 3;
+}
+.hamburger-wrap .toggle {
+  position: absolute;
+  width: 3rem;
+  height: 3rem;
+  z-index: 3;
+  opacity: 0;
+  cursor: pointer;
+}
+.hamburger-wrap .hamburger {
+  width: 3rem;
+  height: 3rem;
+}
+
+.hamburger-wrap .hamburger > span {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: set-text-color($control-color);
+  transition: all cubic-bezier(0.25, 0.1, 0.3, 1.5) 0.32s;
+}
+
+.hamburger-wrap .hamburger > span:first-child {
+  top: 20%;
+}
+.hamburger-wrap .hamburger > span:nth-child(3) {
+  top: 80%;
+}
+
+.hamburger-wrap .toggle:checked + .hamburger > span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-wrap .toggle:checked + .hamburger > span:first-child,
+.hamburger-wrap .toggle:checked + .hamburger > span:nth-child(3) {
+  top: 50%;
+}
+.hamburger-wrap .toggle:checked + .hamburger > span:first-child {
+  transform: rotate(45deg);
+}
+.hamburger-wrap .toggle:checked + .hamburger > span:nth-child(3) {
+  transform: rotate(-45deg);
+}
+.menu-nav {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  width: 15%;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  background: rgba(darken($control-color, 20), 0.9);
+  opacity: 0;
+  @include transition;
+  &.show {
+    opacity: 1;
+  }
+  .nav-item {
+    @include transition;
+    transform: translate3d(400%, 0, 0);
+    &.show {
+      transform: translate3d(0, 0, 0);
+    }
+    .nav-link {
+      transition: all 0.3s;
+      display: inline-block;
+      font-size: 2rem;
+      padding: 1rem 0;
+      color: set-text-color($control-color);
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 50ms;
+  }
+}
