@@ -3,30 +3,23 @@
   max-width: $max-width;
   margin: auto;
   overflow: hidden;
-  padding: 0 2rem;
-  margin-top: 6rem;
-  margin-bottom: 3rem;
 }
 
 // Text styles
 .x-large {
   font-size: 4rem;
-  line-height: 1.2;
-  user-select: none;
+  line-height: 1.4;
 }
 .large {
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 1.2;
-  user-select: none;
 }
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  user-select: none;
 }
 .text-primary {
   color: $primary-color;
-  user-select: none;
 }
 
 // Backgrounds
@@ -39,17 +32,12 @@
   }
   &-light {
     @include set-background($light-color);
-    border: #ccc 1px solid;
   }
   &-danger {
     @include set-background($danger-color);
   }
   &-success {
     @include set-background($success-color);
-  }
-  &-white {
-    @include set-background(#fff);
-    border: #ccc 1px solid;
   }
 }
 
@@ -58,49 +46,60 @@
   display: inline-block;
   padding: 0.5rem 1.3rem;
   border: none;
-  border-radius: 15px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
-  outline: none;
+  transition: background-color 0.3s;
   &:hover {
-    background: lighten($control-color, 10%);
-    transition: background-color 0.3s;
+    background: darken($control-color, 5%);
+  }
+  &-primary {
+    @extend .btn;
+    @include set-background($primary-color);
+    &:hover {
+      background: darken($primary-color, 10%);
+    }
+  }
+  &-secondary {
+    @extend .btn;
+    @include set-background($secondary-color);
+    &:hover {
+      background: darken($secondary-color, 10%);
+    }
+  }
+  &-dark {
+    @extend .btn;
+    @include set-background($dark-color);
+    &:hover {
+      background: darken($dark-color, 10%);
+    }
+  }
+  &-light {
+    @extend .btn;
+    @include set-background($light-color);
+    font-weight: bold;
+    &:hover {
+      background: darken($light-color, 20%);
+    }
+  }
+  &-danger {
+    @extend .btn;
+    @include set-background($danger-color);
+    &:hover {
+      background: darken($danger-color, 10%);
+    }
+  }
+  &-success {
+    @extend .btn;
+    @include set-background($success-color);
+    &:hover {
+      background: darken($success-color, 10%);
+    }
   }
 }
-.btn-primary {
-  @extend .btn;
-  @include set-background($primary-color);
-  &:hover {
-    background: lighten($primary-color, 10%);
-  }
-}
-.btn-dark {
-  @extend .btn;
-  @include set-background(darken($control-color, 50));
-  &:hover {
-    background: lighten(darken($control-color, 50), 10%);
-  }
-}
-.btn-light {
-  @extend .btn;
-  @include set-background(lighten($control-color, 50));
-  &:hover {
-    background: lighten(lighten($control-color, 50), 10%);
-  }
-}
-.btn-danger {
-  @extend .btn;
-  @include set-background($danger-color);
-  &:hover {
-    background: lighten($danger-color, 10%);
-  }
-}
-.btn-success {
-  @extend .btn;
-  @include set-background($success-color);
-  &:hover {
-    background: lighten($success-color, 10%);
-  }
+
+.btn-lead {
+  font-size: 1.5rem;
 }
 
 // Alerts
@@ -127,37 +126,7 @@
 
 // Social icons
 i {
-  &.fa-twitter {
-    color: #38a1f3;
-  }
-  &.fa-facebook {
-    color: #3b5998;
-  }
-  &.fa-instagram {
-    color: #3f729b;
-  }
-  &.fa-youtube {
-    color: #c4302b;
-  }
   &.fa-linkedin {
     color: #0077b5;
-  }
-}
-
-.round-img {
-  border-radius: 50%;
-  border: solid 3px $primary-color;
-}
-
-.table {
-  td,
-  th {
-    padding: 1rem;
-    text-align: left;
-    background-color: $light-color;
-  }
-  th {
-    background-color: $primary-color;
-    color: $light-color;
   }
 }

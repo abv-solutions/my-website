@@ -4,23 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Above Solutions</title>
     <link
       rel="shortcut icon"
       type="image/x-icon"
       href="img/logo_white_nobg.png"
     />
-    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/5c112f7138.js"
       crossorigin="anonymous"
     ></script>
-    <title>Above Solutions</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
 
   <body>
     <header>
       <div class="hamburger-wrap">
-        <input type="checkbox" class="toggle menu-btn" />
+        <input type="checkbox" class="toggle" />
         <div class="hamburger">
           <span></span>
           <span></span>
@@ -30,20 +34,20 @@
       <nav>
         <ul class="menu-nav">
           <li class="nav-item">
-            <a href="#" class="nav-link">Home</a>
+            <a href="#showcase" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">About</a>
+            <a href="#footer" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">My work</a>
+            <a href="#footer" class="nav-link">My work</a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">Get in touch</a>
+            <a href="#footer" class="nav-link">Contact</a>
           </li>
         </ul>
       </nav>
-      <div class="showcase">
+      <div id="showcase" class="showcase">
         <div class="showcase-content">
           <img
             src="img/logo_white_nobg.png"
@@ -51,19 +55,21 @@
             alt="Above Solutions"
           />
           <div class="title">
-            <p>Above Solutions</p>
+            <p class="x-large">Above Solutions</p>
+            <p
+              class="large txt-type"
+              data-wait="2000"
+              data-words='["Development", "Code", "Design"]'
+            ></p>
           </div>
-          <div class="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias,
-            ipsam.
-          </div>
+          <a href="#footer" class="btn btn-primary btn-lead my-4">Read more</a>
         </div>
       </div>
     </header>
 
     <main>
       <section class="services">
-        <div class="container center grid-3">
+        <div class="container">
           <div>
             <i class="fas fa-briefcase fa-6x"></i>
             <h3 class="header-3">Freelance projects</h3>
@@ -92,8 +98,8 @@
       </section>
     </main>
 
-    <footer class="footer">
-      Copyright &copy; 2019
+    <footer id="footer" class="footer">
+      &copy; 2020 Above Solutions
     </footer>
 
     <script src="js/main.js"></script>

@@ -26,35 +26,116 @@ $background-opacity: 0.9;
 }
 
 // Transition mixin
-@mixin transition {
+@mixin transitionL {
+  transition: all 1.5s;
+}
+@mixin transitionM {
   transition: all 0.7s;
 }
-@mixin transitionFilter {
+@mixin transitionS {
+  transition: all 0.3s;
+}
+@mixin transitionF {
   transition: filter 0.8s;
 }
+
 // Media query mixins
+@mixin mediaXxs {
+  @media screen and (max-width: 415px) {
+    @content;
+  }
+}
+@mixin mediaXs {
+  @media screen and (max-width: 520px) {
+    @content;
+  }
+}
 @mixin mediaSm {
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 620px) {
     @content;
   }
 }
 @mixin mediaMd {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 850px) {
     @content;
   }
 }
 @mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
+  @media screen and (max-width: 1170px) {
     @content;
   }
 }
 @mixin mediaXl {
-  @media screen and (min-width: 1171px) {
+  @media screen and (min-width: 1171px) and (min-width: 851px) {
     @content;
   }
 }
-@mixin mediaH {
-  @media screen and (max-height: 780px) and (max-width: 768px) {
+
+// Height control for large widths
+@mixin mediaHXs {
+  @media screen and (max-height: 410px) and (min-width: 851px) {
+    @content;
+  }
+}
+@mixin mediaHSm {
+  @media screen and (max-height: 580px) {
+    @content;
+  }
+}
+@mixin mediaLHSm {
+  @media screen and (max-height: 580px) and (min-width: 620px) {
+    @content;
+  }
+}
+@mixin mediaHMd {
+  @media screen and (max-height: 840px) {
+    @content;
+  }
+}
+
+// Height control for small widths
+@mixin mediaMdHXs {
+  @media screen and (max-height: 440px) and (max-width: 850px) {
+    @content;
+  }
+}
+@mixin mediaMdHSm {
+  @media screen and (max-height: 580px) and (max-width: 850px) {
+    @content;
+  }
+}
+@mixin mediaMdHMd {
+  @media screen and (max-height: 840px) and (max-width: 850px) {
+    @content;
+  }
+}
+@mixin mediaXsHMd {
+  @media screen and (max-height: 840px) and (max-width: 520px) {
+    @content;
+  }
+}
+@mixin mediaXsHSm {
+  @media screen and (max-height: 580px) and (max-width: 520px) {
+    @content;
+  }
+}
+@mixin mediaXsHXs {
+  @media screen and (max-height: 440px) and (max-width: 520px) {
+    @content;
+  }
+}
+@mixin mediaXxsHMd {
+  @media screen and (max-height: 840px) and (max-width: 415px) {
+    @content;
+  }
+}
+@mixin mediaXxsHSm {
+  @media screen and (max-height: 580px) and (max-width: 415px) {
+    @content;
+  }
+}
+@mixin mediaXxsHXs {
+  @media screen and (max-height: 440px) and (max-width: 415px) {
     @content;
   }
 }
