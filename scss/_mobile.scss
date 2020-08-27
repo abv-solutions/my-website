@@ -178,6 +178,16 @@
     display: none;
   }
 }
+@include mediaSmHSm {
+  .menu-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
 @include mediaXsHMd {
   .menu-nav {
     &.show {
@@ -224,16 +234,6 @@
       .nav-link {
         font-size: 1rem;
         padding: 0 1rem;
-      }
-    }
-  }
-}
-
-@include mediaLHSm {
-  .menu-nav {
-    .nav-item {
-      .nav-link {
-        font-size: 1.5rem;
       }
     }
   }
