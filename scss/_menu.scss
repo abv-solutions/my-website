@@ -68,7 +68,7 @@
   @include transitionM;
   &.show {
     opacity: 1;
-    width: 15%;
+    width: 12rem;
   }
   .nav-item {
     @include transitionM;
@@ -84,8 +84,8 @@
     .nav-link {
       @include transitionS;
       display: inline-block;
-      font-size: 2rem;
-      padding: 1rem 0;
+      font-size: clamp(1.2rem, calc(4vh + 0.3rem), 2rem);
+      padding: clamp(0.1rem, calc(1.5vh + 0.1rem), 1rem) 0;
       color: set-text-color($control-color);
       &:hover {
         transform: scale(1.2);

@@ -1,10 +1,10 @@
 // Variables
 $control-color: #252930;
-$primary-color: #103c89;
-$secondary-color: #186ef9;
+$primary-color: #00420e;
+$secondary-color: #008f1f;
 $dark-color: #252930;
 $light-color: #eee;
-$danger-color: #dc3545;
+$danger-color: #070707;
 $success-color: #28a745;
 $max-width: 1100px;
 $home-image: url('../img/laptop1.jpg');
@@ -39,105 +39,19 @@ $background-opacity: 0.9;
   transition: filter 0.8s;
 }
 
-// Width control
-@mixin mediaXxs {
-  @media screen and (max-width: 415px) {
-    @content;
-  }
-}
-@mixin mediaXs {
-  @media screen and (max-width: 520px) {
-    @content;
-  }
-}
-@mixin mediaSm {
-  @media screen and (max-width: 620px) {
-    @content;
-  }
-}
+// Media queries
 @mixin mediaMd {
   @media screen and (max-width: 850px) {
     @content;
   }
 }
-@mixin mediaLg {
-  @media screen and (max-width: 1170px) {
-    @content;
-  }
-}
-@mixin mediaXl {
-  @media screen and (min-width: 1171px) and (min-width: 851px) {
-    @content;
-  }
-}
-
-// Height control, large widths
-@mixin mediaHXs {
-  @media screen and (max-height: 440px) and (min-width: 851px) {
+@mixin mediaSm {
+  @media screen and (max-width: 520px) {
     @content;
   }
 }
 @mixin mediaHSm {
-  @media screen and (max-height: 580px) {
-    @content;
-  }
-}
-@mixin mediaHMd {
-  @media screen and (max-height: 840px) {
-    @content;
-  }
-}
-
-// Height control, small widths
-@mixin mediaMdHXs {
-  @media screen and (max-height: 440px) and (max-width: 850px) {
-    @content;
-  }
-}
-@mixin mediaMdHSm {
-  @media screen and (max-height: 580px) and (max-width: 850px) {
-    @content;
-  }
-}
-@mixin mediaMdHMd {
-  @media screen and (max-height: 840px) and (max-width: 850px) {
-    @content;
-  }
-}
-@mixin mediaSmHSm {
-  @media screen and (max-height: 580px) and (min-width: 620px) {
-    @content;
-  }
-}
-
-@mixin mediaXsHXs {
-  @media screen and (max-height: 440px) and (max-width: 520px) {
-    @content;
-  }
-}
-@mixin mediaXsHSm {
-  @media screen and (max-height: 580px) and (max-width: 520px) {
-    @content;
-  }
-}
-@mixin mediaXsHMd {
-  @media screen and (max-height: 840px) and (max-width: 520px) {
-    @content;
-  }
-}
-
-@mixin mediaXxsHXs {
-  @media screen and (max-height: 440px) and (max-width: 415px) {
-    @content;
-  }
-}
-@mixin mediaXxsHSm {
-  @media screen and (max-height: 580px) and (max-width: 415px) {
-    @content;
-  }
-}
-@mixin mediaXxsHMd {
-  @media screen and (max-height: 840px) and (max-width: 415px) {
+  @media screen and (max-height: 440px) {
     @content;
   }
 }
@@ -154,6 +68,18 @@ $rems: (1, 2, 3, 4, 5);
   .my-#{$rem} {
     margin: #{$rem}rem 0;
   }
+  .mt-#{$rem} {
+    margin-top: #{$rem}rem;
+  }
+  .mb-#{$rem} {
+    margin-bottom: #{$rem}rem;
+  }
+  .ml-#{$rem} {
+    margin-left: #{$rem}rem;
+  }
+  .mr-#{$rem} {
+    margin-right: #{$rem}rem;
+  }
   .p-#{$rem} {
     padding: #{$rem}rem;
   }
@@ -162,5 +88,17 @@ $rems: (1, 2, 3, 4, 5);
   }
   .py-#{$rem} {
     padding: #{$rem}rem 0;
+  }
+  .pt-#{$rem} {
+    padding-top: #{$rem}rem;
+  }
+  .pb-#{$rem} {
+    padding-bottom: #{$rem}rem;
+  }
+  .pl-#{$rem} {
+    padding-left: #{$rem}rem;
+  }
+  .pr-#{$rem} {
+    padding-right: #{$rem}rem;
   }
 }

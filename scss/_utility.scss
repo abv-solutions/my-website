@@ -1,5 +1,6 @@
 // Container
 .container {
+  width: 80%;
   max-width: $max-width;
   margin: auto;
   overflow: hidden;
@@ -7,19 +8,21 @@
 
 // Text styles
 .x-large {
-  font-size: 4rem;
+  font-size: clamp(2rem, calc(5.5vh + 1rem), 4rem);
+  font-weight: normal;
   line-height: 1.4;
 }
 .large {
-  font-size: 2.5rem;
+  font-size: clamp(1.3rem, calc(4vh + 0.5rem), 2.5rem);
+  font-weight: normal;
   line-height: 1.2;
 }
 .lead {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
-.text-primary {
-  color: $primary-color;
+.center {
+  text-align: center;
 }
 
 // Backgrounds
@@ -99,7 +102,12 @@
 }
 
 .btn-lead {
-  font-size: 1.5rem;
+  font-size: clamp(1rem, calc(2vh + 0.4rem), 1.5rem);
+  margin-top: clamp(1rem, calc(3vh + 0.2rem), 3rem);
+  @include set-background(rgba($primary-color, 0.4));
+  &:hover {
+    background: rgba(darken($primary-color, 7%), 0.4);
+  }
 }
 
 // Alerts
@@ -128,5 +136,23 @@
 i {
   &.fa-linkedin {
     color: #0077b5;
+  }
+  &.fa-html5 {
+    color: #e44d26;
+  }
+  &.fa-css3-alt {
+    color: #2965f1;
+  }
+  &.fa-js-square {
+    color: #f0db4f;
+  }
+  &.fa-react {
+    color: #61dbfb;
+  }
+  &.fa-node-js {
+    color: #3c873a;
+  }
+  &.fa-file-code {
+    color: #813787;
   }
 }

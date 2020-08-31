@@ -33,13 +33,16 @@ ul {
   width: 100%;
   z-index: -1;
   display: block;
-  background: linear-gradient(
-      0deg,
-      rgba($control-color, $background-opacity),
-      rgba($control-color, $background-opacity)
-    ),
-    $home-image no-repeat center center/cover;
-  background-blend-mode: multiply;
+  @supports (background-blend-mode: multiply) {
+    background: linear-gradient(
+        0deg,
+        rgba($control-color, $background-opacity),
+        rgba($control-color, $background-opacity)
+      ),
+      $home-image no-repeat center center/cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+  }
   filter: blur(12px);
   -webkit-filter: blur(12px);
   @include transitionF;
@@ -49,8 +52,8 @@ ul {
     filter: blur(0px);
     -webkit-filter: blur(0px);
   }
-  & .logo,
-  & .title {
+  .logo,
+  .title {
     filter: blur(3px);
     -webkit-filter: blur(3px);
   }
@@ -58,36 +61,81 @@ ul {
 .showcase-content {
   position: absolute;
   width: 30rem;
-  height: 30rem;
+  height: clamp(16rem, calc(62vh + 2rem), 30rem);
   left: 50%;
   top: 50%;
   z-index: 1;
-  text-align: center;
   margin-left: -15rem;
-  margin-top: -15rem;
+  margin-top: clamp(-15rem, calc(2rem - 45vh), -8rem);
   animation-name: animation;
   animation-duration: 3s;
-  & .logo,
-  & .title {
+  .logo,
+  .title {
     @include transitionF;
     color: set-text-color($control-color);
   }
-  & .logo {
-    width: 20rem;
+  .logo {
+    width: clamp(10rem, calc(40vh + 2rem), 20rem);
   }
-  & .title {
-    min-height: 150px;
+  .title {
+    min-height: clamp(6rem, calc(18vh + 1rem), 10rem);
   }
 }
 .txt-type > .txt {
   border-right: 0.05rem solid #888;
 }
 
-.footer {
+#about {
+  .passions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 3rem;
+    li {
+      font-size: 1.2rem;
+      text-align: center;
+      i {
+        display: block;
+      }
+    }
+  }
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 3rem;
+    li {
+      font-size: 1.2rem;
+      text-align: center;
+      i {
+        display: block;
+      }
+    }
+  }
+}
+
+#services .skills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  & .lead {
+    display: flex;
+    align-items: center;
+  }
+}
+.container section h1 {
+  position: relative;
+  .dash {
+    position: absolute;
+    top: -0.5rem;
+    width: clamp(1.5rem, calc(3.5vh + 1rem), 3rem);
+    height: 6px;
+    border-radius: 3px;
+    background: $secondary-color;
+  }
+}
+
+#footer {
   text-align: center;
-  padding: 1rem;
   @include set-background(darken($control-color, 5));
-  height: 60px;
 }
 
 @import 'mobile';

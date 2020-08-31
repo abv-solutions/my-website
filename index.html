@@ -14,10 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/5c112f7138.js"
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
       crossorigin="anonymous"
-    ></script>
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -37,69 +39,96 @@
             <a href="#showcase" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#footer" class="nav-link">About</a>
+            <a href="#about" class="nav-link">About</a>
           </li>
           <li class="nav-item">
-            <a href="#footer" class="nav-link">My work</a>
+            <a href="#services" class="nav-link">Services</a>
           </li>
           <li class="nav-item">
-            <a href="#footer" class="nav-link">Contact</a>
+            <a href="#contact" class="nav-link">Contact</a>
           </li>
         </ul>
       </nav>
       <div id="showcase" class="showcase">
-        <div class="showcase-content">
+        <div class="showcase-content center">
           <img
             src="img/logo_white_nobg.png"
             class="logo"
             alt="Above Solutions"
           />
           <div class="title">
-            <p class="x-large">Above Solutions</p>
+            <h1 class="x-large">Above Solutions</h1>
             <p
               class="large txt-type"
               data-wait="2000"
               data-words='["Development", "Code", "Design"]'
             ></p>
           </div>
-          <a href="#footer" class="btn btn-primary btn-lead my-4">Read more</a>
+          <a href="#footer" class="btn btn-primary btn-lead">Discover more</a>
         </div>
       </div>
     </header>
 
-    <main>
-      <section class="services">
-        <div class="container">
+    <main class="container pt-5">
+      <section id="about" class="mb-5">
+        <h1 class="x-large pb-1"><span class="dash"></span>About</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+          voluptatibus tenetur nesciunt dolor perspiciatis! Nobis dolore quas a
+          asperiores, odio beatae facilis aut.
+        </p>
+        <h2 class="lead center py-1">Passionate about</h2>
+        <ul class="passions mb-3">
+          <li><i class="fas fa-mobile-alt fa-3x pb-1"></i>Technology</li>
+          <li><i class="fas fa-paint-brush fa-3x pb-1"></i>Art</li>
+          <li><i class="fas fa-globe-europe fa-3x pb-1"></i>Sustainability</li>
+        </ul>
+        <h2 class="lead center py-1">I speak</h2>
+        <ul class="skills">
+          <li><i class="fab fa-html5 fa-3x pb-1"></i>HTML</li>
+          <li><i class="fab fa-css3-alt fa-3x pb-1"></i>CSS</li>
+          <li><i class="fab fa-js-square fa-3x pb-1"></i>JavaScript</li>
+          <li><i class="fab fa-react fa-3x pb-1"></i>React</li>
+          <li><i class="fas fa-file-code fa-3x pb-1"></i>C#</li>
+          <li><i class="fab fa-node-js fa-3x pb-1"></i>NodeJS</li>
+        </ul>
+      </section>
+      <section id="services" class="mb-5">
+        <h1 class="x-large pb-1"><span class="dash"></span>Services</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+          voluptatibus tenetur nesciunt dolor perspiciatis! Nobis dolore quas a
+          asperiores, odio beatae facilis aut.
+        </p>
+        <div class="skills pt-2">
           <div>
-            <i class="fas fa-briefcase fa-6x"></i>
-            <h3 class="header-3">Freelance projects</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Mollitia, fugit.
-            </p>
+            <h2 class="lead">
+              <i class="fas fa-briefcase fa-2x pr-1"></i>Solutions
+            </h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
           <div>
-            <i class="fas fa-edit fa-6x"></i>
-            <h3 class="header-3">Design</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio,
-              beatae.
-            </p>
+            <h2 class="lead"><i class="fas fa-edit fa-2x pr-1"></i>Design</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
           <div>
-            <i class="fas fa-code fa-6x"></i>
-            <h3 class="header-3">Code</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Repellendus, ipsum!
-            </p>
+            <h2 class="lead"><i class="fas fa-code fa-2x pr-1"></i>Code</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
           </div>
         </div>
       </section>
+      <section id="contact" class="mb-5">
+        <h1 class="x-large pb-1"><span class="dash"></span>Contact</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
+          voluptatibus tenetur nesciunt dolor perspiciatis! Nobis dolore quas a
+          asperiores, odio beatae facilis aut.
+        </p>
+      </section>
     </main>
 
-    <footer id="footer" class="footer">
-      &copy; 2020 Above Solutions
+    <footer id="footer" class="py-1">
+      <p>&copy; 2020 Above Solutions</p>
     </footer>
 
     <script src="js/main.js"></script>
