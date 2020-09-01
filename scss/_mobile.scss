@@ -51,6 +51,22 @@
   .large {
     font-size: 1.3rem;
   }
+  #about {
+    .passions {
+      li {
+        i {
+          right: 30%;
+        }
+      }
+    }
+    .skills {
+      li {
+        i {
+          right: 20%;
+        }
+      }
+    }
+  }
 }
 
 @include mediaHSm {

@@ -26,6 +26,9 @@ a {
 ul {
   list-style: none;
 }
+hr {
+  opacity: 0.3;
+}
 
 .showcase:after {
   content: '';
@@ -87,26 +90,43 @@ ul {
 
 #about {
   .passions {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
     li {
+      position: relative;
       font-size: 1.2rem;
+      width: 15rem;
       text-align: center;
+      font-weight: bold;
       i {
-        display: block;
+        position: absolute;
+        top: 20%;
+        right: 45%;
+        opacity: 0.2;
+        z-index: -1;
+        color: $secondary-color;
       }
     }
   }
   .skills {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 3rem;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
     li {
+      position: relative;
       font-size: 1.2rem;
+      width: 10rem;
       text-align: center;
+      font-weight: bold;
       i {
-        display: block;
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        opacity: 0.2;
+        z-index: -1;
       }
     }
   }
