@@ -21,7 +21,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: $primary-color;
+  color: set-text-color($primary-color);
 }
 ul {
   list-style: none;
@@ -88,6 +88,18 @@ hr {
   border-right: 0.05rem solid #888;
 }
 
+.container section h1 {
+  position: relative;
+  .dash {
+    position: absolute;
+    top: -0.5rem;
+    width: clamp(1.5rem, calc(3.5vh + 1rem), 3rem);
+    height: 6px;
+    border-radius: 3px;
+    background: $secondary-color;
+  }
+}
+
 #about {
   .passions {
     display: flex;
@@ -110,7 +122,7 @@ hr {
       }
     }
   }
-  .skills {
+  .technologies {
     display: flex;
     flex-flow: wrap;
     justify-content: center;
@@ -132,24 +144,52 @@ hr {
   }
 }
 
-#services .skills {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  & .lead {
+#services {
+  .skills {
     display: flex;
-    align-items: center;
+    flex-flow: wrap;
+    justify-content: center;
+    .skill {
+      width: 20rem;
+      .lead {
+        display: flex;
+        align-items: center;
+      }
+    }
   }
-}
-.container section h1 {
-  position: relative;
-  .dash {
-    position: absolute;
-    top: -0.5rem;
-    width: clamp(1.5rem, calc(3.5vh + 1rem), 3rem);
-    height: 6px;
-    border-radius: 3px;
-    background: $secondary-color;
+  .work {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    .project {
+      @include transitionS;
+      position: relative;
+      width: clamp(14rem, calc(30vw + 8rem), 20rem);
+      height: 10rem;
+      a {
+        img {
+          border-radius: 10px;
+          width: clamp(14rem, calc(30vw + 8rem), 20rem);
+          height: 10rem;
+        }
+      }
+      div {
+        position: absolute;
+        bottom: 0;
+        padding: 0.5rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        background-color: rgba($dark-color, 0.8);
+        .lead {
+          font-size: clamp(1.2rem, calc(4vw + 0.3rem), 1.5rem);
+        }
+      }
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
   }
 }
 
