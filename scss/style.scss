@@ -31,6 +31,7 @@ hr {
 }
 
 #showcase:after {
+  @include transitionF;
   content: '';
   height: 100vh;
   width: 100%;
@@ -48,7 +49,6 @@ hr {
   }
   filter: blur(12px);
   -webkit-filter: blur(12px);
-  @include transitionF;
 }
 #showcase:hover {
   &:after {
@@ -194,8 +194,8 @@ hr {
 }
 
 #footer {
-  text-align: center;
   @include set-background(darken($control-color, 5));
+  text-align: center;
 }
 
 @import 'mobile';

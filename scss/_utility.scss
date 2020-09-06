@@ -101,9 +101,9 @@
 }
 
 .btn-lead {
+  @include set-background(rgba($primary-color, 0.4));
   font-size: clamp(1rem, calc(2vh + 0.4rem), 1.5rem);
   margin-top: clamp(1rem, calc(3vh + 0.2rem), 3rem);
-  @include set-background(rgba($primary-color, 0.4));
   &:hover {
     background: rgba(darken($primary-color, 7%), 0.4);
   }
