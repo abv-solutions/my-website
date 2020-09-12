@@ -30,7 +30,7 @@ class TypeWriter {
   type() {
     const current = this.wordIndex % this.words.length
     const fullText = this.words[current]
-    let typeSpeed = 200
+    let typeSpeed = 150
     if (this.isDeleting) {
       this.txt = fullText.substring(0, this.txt.length - 1)
       typeSpeed /= 2
@@ -45,7 +45,7 @@ class TypeWriter {
     } else if (this.isDeleting && this.txt === '') {
       this.isDeleting = false
       this.wordIndex++
-      typeSpeed = 1000
+      typeSpeed = 500
       this.txtElement.style.display = 'none'
     }
     // Cyclic function call

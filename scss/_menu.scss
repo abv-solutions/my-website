@@ -1,7 +1,7 @@
 .hamburger-wrap {
   position: fixed;
-  top: 15px;
-  right: 20px;
+  top: 0;
+  right: 0;
   width: 3rem;
   height: 3rem;
   z-index: 3;
@@ -62,7 +62,8 @@
   flex-flow: column wrap;
   align-items: center;
   justify-content: center;
-  background: rgba(darken($control-color, 20), 0.8);
+
+  background: rgba(darken($control-color, 20), 0.97);
   border-top-left-radius: 50%;
   border-bottom-left-radius: 50%;
   opacity: 0;
