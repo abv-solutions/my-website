@@ -59,18 +59,18 @@ $background-opacity: 0.75;
     @content;
   }
 }
-@mixin mediaXs {
-  @media screen and (max-width: 326px) {
-    @content;
-  }
-}
 @mixin mediaHMd {
-  @media screen and (max-height: 700px) and (min-width: 325px) {
+  @media screen and (max-height: 700px) {
     @content;
   }
 }
 @mixin mediaHSm {
-  @media screen and (max-height: 450px) and (min-width: 325px) {
+  @media screen and (max-height: 450px) {
+    @content;
+  }
+}
+@mixin mediaSmHXs {
+  @media screen and (max-width: 548px) and (max-height: 370px) {
     @content;
   }
 }

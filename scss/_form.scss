@@ -24,7 +24,7 @@
   select:focus,
   textarea:focus {
     box-shadow: 0 1px 1px rgba(set-text-color($control-color), 0.1) inset,
-      0 0 8px rgba(set-text-color($control-color), 0.6);
+      0 0 15px rgba(set-text-color($control-color), 0.6);
     outline: 0 none;
   }
   button {
