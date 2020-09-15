@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Above Solutions</title>
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="img/logo_white_nobg.png"
-    />
+    <link rel="shortcut icon" type="image/x-icon" href="img/logo.ico" />
+    <link rel="icon" type="image/x-icon" href="img/logo.ico" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
       rel="stylesheet"
@@ -25,17 +22,19 @@
 
   <body>
     <header>
+      <!-- Company logo -->
       <div class="company m-1">
         <img src="img/logo_white_nobg.png" class="logo" alt="Above Solutions" />
         <div class="title">
           <h1>Above Solutions</h1>
           <p
-            class="lead txt-type"
+            class="txt-type"
             data-wait="1000"
             data-words='["Innovation", "Development", "Code", "Design", "Technology", "Industry"]'
           ></p>
         </div>
       </div>
+      <!-- Menu -->
       <div class="hamburger-wrap m-1">
         <input type="checkbox" class="toggle" />
         <div class="hamburger">
@@ -60,237 +59,318 @@
           </li>
         </ul>
       </nav>
+      <!-- Showcase -->
       <section id="showcase">
         <div class="showcase-content center">
-          <div class="header">
+          <div class="header mt-5 px-1">
             <h1 class="x-large">Take your business to the next level</h1>
             <p class="medium">
               Get innovative web solutions, perfectly designed to meet your
               needs
             </p>
           </div>
-          <a href="#about" class="btn btn-lead">START NOW</a>
+          <div>
+            <a href="#call" class="btn btn-primary btn-lead">START NOW</a>
+          </div>
         </div>
       </section>
       <section id="keys">
         <div class="key">
-          <p class="lead">
-            <i class="far fa-money-bill-alt fa-2x pr-1"></i>Save money
-          </p>
+          <p><i class="far fa-money-bill-alt fa-2x pr-1"></i>Save money</p>
         </div>
         <div class="key">
-          <p class="lead"><i class="far fa-clock fa-2x pr-1"></i>Save time</p>
+          <p><i class="far fa-clock fa-2x pr-1"></i>Save time</p>
         </div>
         <div class="key">
-          <p class="lead">
-            <i class="fas fa-arrow-up fa-2x pr-1"></i>Reach the top
-          </p>
+          <p><i class="fas fa-arrow-up fa-2x pr-1"></i>Reach the top</p>
         </div>
       </section>
     </header>
 
-    <main class="container pt-5">
-      <section id="hook" class="mb-5">
-        <h1 class="x-large center mb-1">Life is too short to compromise</h1>
-        <p class="lead center">
-          Human errors are no fun. Avoid them with the right tools. Let
-          technology do more for you and get the most out of your business.
-        </p>
-        <p class="lead center">
-          Use top quality web solutions to boost your income, save time and
-          optimize your process. Think smart, not hard!
-        </p>
-        <div class="center">
-          <a href="#about" class="btn btn-lead">START NOW</a>
-        </div>
-      </section>
-      <section id="about" class="mb-5">
-        <h1 class="x-large pb-1"><span class="dash"></span>About</h1>
-        <p>
-          Every project is unique and requires a perfectly tailored solution.
-          This demands great focus on details, a quality which is exactly what
-          sets me apart in this industry. Nothing standard or common will take
-          place in my work, nor any specific style as I adapt according to every
-          client’s requirements. I see every task as a new challenge and take
-          pride in my ability to deliver the best results that will suit your
-          particular needs.
-        </p>
-        <p class="my-1">
-          You will work with an overachiever focused on providing the most value
-          to your organization. The level of your satisfaction is my top
-          priority. Efficiency, responsiveness and diligence are the pillars of
-          my work ethic. Passion and complete dedication mirror in all of my
-          work and always earn me the client’s trust.
-        </p>
-        <p>
-          Constant improvement is one of my core values. Whatever the problem, I
-          always find the most innovative solutions for your business and
-          deliver them on time. You will find in me a partner who will help you
-          achieve your dreams.
-        </p>
-        <h2 class="lead center mt-3">I speak</h2>
-        <ul class="technologies">
-          <li class="py-4"><i class="fab fa-html5 fa-5x"></i>HTML</li>
-          <li class="py-4"><i class="fab fa-css3-alt fa-5x"></i>CSS</li>
-          <li class="py-4"><i class="fab fa-js-square fa-5x"></i>JavaScript</li>
-          <li class="py-4"><i class="fab fa-react fa-5x"></i>React</li>
-          <li class="py-4"><i class="fas fa-file-code fa-5x"></i>C#</li>
-          <li class="py-4"><i class="fab fa-node-js fa-5x"></i>NodeJS</li>
-        </ul>
-      </section>
+    <main class="pt-5">
+      <div class="container">
+        <!-- About -->
+        <section id="about">
+          <h1 class="x-large center mb-1">Life is too short to compromise</h1>
+          <div class="cost">
+            <img src="img/icons/coding.png" alt="Above Solutions" />
+            <div class="right my-1">
+              <p class="lead center">
+                Human errors are no fun. Avoid them with the right tools. Let
+                technology do more for you and get the most out of your
+                business.
+              </p>
+              <p class="lead center my-1">
+                Use top quality web solutions to boost your income, save time
+                and optimize your process. Think smart, not hard!
+              </p>
+              <div class="center">
+                <a href="#call" class="btn btn-primary btn-lead">START NOW</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="cost-img mt-5"></div>
+      <!-- Services -->
       <section id="services" class="mb-5">
-        <h1 class="x-large pb-1"><span class="dash"></span>Services</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          voluptatibus tenetur nesciunt dolor perspiciatis! Nobis dolore quas a
-          asperiores, odio beatae facilis aut.
-        </p>
-        <div class="skills pt-2">
-          <div class="skill mx-1">
-            <h2 class="lead py-1">
-              <i class="fas fa-briefcase fa-2x pr-1"></i>Solutions
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <div class="skill mx-1">
-            <h2 class="lead py-1">
-              <i class="fas fa-edit fa-2x pr-1"></i>Design
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-          <div class="skill mx-1">
-            <h2 class="lead py-1">
-              <i class="fas fa-code fa-2x pr-1"></i>Development
-            </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <div class="hook">
+          <div class="hook-content">
+            <div class="left my-3">
+              <p class="x-large">It's not about coding.</p>
+              <p class="x-large mb-1">It's about success.</p>
+              <a href="#call" class="btn btn-primary btn-lead">START NOW</a>
+            </div>
+            <ul class="right lead">
+              <li>Perfectly tailored solutions to your problems</li>
+              <li>Highest concern for your trust and level of satisfaction</li>
+              <li>Efficient, innovative and fast results</li>
+            </ul>
           </div>
         </div>
-        <hr class="mt-4 mb-3" />
-        <h2 class="lead center mb-1">My work</h2>
-        <div class="work">
-          <div class="project m-1">
-            <a
-              href="https://abv-solutions.github.io/asp-dotnet-shop"
-              target="_blank"
-            >
-              <img src="img/online_shop.png" alt="Project" />
-              <div>
-                <span class="lead">Online Shop</span>
-                <a
-                  href="https://github.com/abv-solutions/asp-dotnet-shop"
-                  target="_blank"
-                  class="fab fa-github fa-2x"
-                ></a>
-              </div>
-            </a>
+        <div class="container">
+          <h1 class="x-large my-1"><span class="dash"></span>My services</h1>
+          <div class="skills pt-2 mb-5">
+            <div class="skill mx-1">
+              <h2 class="lead py-1">
+                <i class="fas fa-briefcase fa-2x pr-1"></i>Solutions
+              </h2>
+              <p>
+                Whatever the problem, you will get the most innovative solutions
+                for your business.
+              </p>
+            </div>
+            <div class="skill mx-1">
+              <h2 class="lead py-1">
+                <i class="fas fa-code fa-2x pr-1"></i>Development
+              </h2>
+              <p>
+                Your app will be built with top-notch technologies. Nothing is
+                used by chance.
+              </p>
+            </div>
+            <div class="skill mx-1">
+              <h2 class="lead py-1">
+                <i class="fas fa-edit fa-2x pr-1"></i>Design
+              </h2>
+              <p>
+                Get a modern product designed to look amazing. You'll love using
+                it.
+              </p>
+            </div>
           </div>
-          <div class="project m-1">
-            <a
-              href="https://react-abv-solutions.firebaseapp.com"
-              target="_blank"
-            >
-              <img src="img/project_planner.png" alt="Project" />
-              <div>
-                <span class="lead">Project Planner</span>
-                <a
-                  href="https://github.com/abv-solutions/react-firebase"
-                  target="_blank"
-                  class="fab fa-github fa-2x"
-                ></a>
-              </div>
-            </a>
+          <h1 class="x-large center">How it works</h1>
+          <div class="steps pt-2">
+            <div class="step mx-1">
+              <i class="far fa-comment fa-10x"></i>
+              <p class="lead py-1">1. Name your problem</p>
+            </div>
+            <div class="step mx-1">
+              <i class="far fa-handshake fa-10x"></i>
+              <p class="lead py-1">2. Let me solve it</p>
+            </div>
+            <div class="step mx-1">
+              <i class="far fa-laugh-beam fa-10x"></i>
+              <p class="lead py-1">3. Achieve your dreams</p>
+            </div>
           </div>
-          <div class="project m-1">
-            <a
-              href="https://mern-above-solutions.herokuapp.com"
-              target="_blank"
-            >
-              <img src="img/shopping_list.png" alt="Project" />
-              <div>
-                <span class="lead">Shopping List</span>
-                <a
-                  href="https://github.com/abv-solutions/mern"
-                  target="_blank"
-                  class="fab fa-github fa-2x"
-                ></a>
-              </div>
-            </a>
-          </div>
-          <div class="project m-1">
-            <a
-              href="https://abv-solutions.github.io/angular-spotify-api"
-              target="_blank"
-            >
-              <img src="img/music_finder.png" alt="Project" />
-              <div>
-                <span class="lead">Music Finder</span>
-                <a
-                  href="https://github.com/abv-solutions/angular-spotify-api"
-                  target="_blank"
-                  class="fab fa-github fa-2x"
-                ></a>
-              </div>
-            </a>
-          </div>
-          <div class="project m-1">
-            <a
-              href="https://node-above-solutions.herokuapp.com"
-              target="_blank"
-            >
-              <img src="img/knowledge_point.png" alt="Project" />
-              <div>
-                <span class="lead">Knowledge Point</span>
-                <a
-                  href="https://github.com/abv-solutions/node-web"
-                  target="_blank"
-                  class="fab fa-github fa-2x"
-                ></a>
-              </div>
-            </a>
-          </div>
-          <div class="project m-1">
-            <a href="https://blog-abv-solutions.netlify.app" target="_blank">
-              <img src="img/gatsby_blog.png" alt="Project" />
-              <div>
-                <span class="lead">Blog</span>
-                <a
-                  href="https://github.com/abv-solutions/gatsby-blog"
-                  target="_blank"
-                  class="fab fa-github fa-2x"
-                ></a>
-              </div>
-            </a>
+          <div class="lead-gen center py-1">
+            <h1 class="x-large">Not convinced?</h1>
+            <p class="lead my-1">
+              Let's jump on an initial 15-minute free call, where we will
+              discuss your project in more detail and identify the best solution
+              for you.
+            </p>
+            <div>
+              <a href="#call" class="btn btn-primary btn-lead">START NOW</a>
+            </div>
           </div>
         </div>
       </section>
-      <section id="contact" class="mb-2">
-        <h1 class="x-large"><span class="dash"></span>Contact</h1>
-        <p class="py-1">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid
-          voluptatibus tenetur nesciunt dolor perspiciatis! Nobis dolore quas a
-          asperiores, odio beatae facilis aut.
-        </p>
-        <form action="#" class="form">
-          <div class="form-group">
-            <input type="text" placeholder="Name" required />
+      <div class="container">
+        <!-- Info -->
+        <section class="info mb-5">
+          <h1 class="x-large my-1"><span class="dash"></span>Get to know me</h1>
+          <p class="lead">
+            Every project is unique and demands great focus on details, exactly
+            the quality that sets me apart in this industry. Nothing standard or
+            common takes place in my work, nor any specific style as I adapt
+            according to every client’s particular needs. I see every task as a
+            new challenge and take pride in my ability to deliver the best
+            solutions.
+          </p>
+          <p class="lead my-1">
+            You will work with an overachiever focused on providing the most
+            value to your organization. Efficiency, responsiveness and diligence
+            are the pillars of my work ethic. Passion and complete dedication
+            mirror in all of my work. You will find in me a partner who will
+            help you achieve your dreams.
+          </p>
+          <h1 class="x-large center mt-3">I speak</h1>
+          <ul class="technologies">
+            <li class="py-4"><i class="fab fa-html5 fa-5x"></i>HTML</li>
+            <li class="py-4"><i class="fab fa-css3-alt fa-5x"></i>CSS</li>
+            <li class="py-4">
+              <i class="fab fa-js-square fa-5x"></i>JavaScript
+            </li>
+            <li class="py-4"><i class="fab fa-react fa-5x"></i>React</li>
+            <li class="py-4"><i class="fas fa-file-code fa-5x"></i>C#</li>
+            <li class="py-4"><i class="fab fa-node-js fa-5x"></i>NodeJS</li>
+          </ul>
+        </section>
+        <!-- Work -->
+        <section id="work" class="mb-5">
+          <h1 class="x-large my-1"><span class="dash"></span>My work</h1>
+          <p class="lead mb-1">
+            As my professional experience, I developed numerous web and desktop
+            software solutions in the engineering and tech fields for problems
+            related to workflows, process optimization, management, software
+            tools and traceability.
+          </p>
+          <p class="lead mb-1">
+            Check out some of my personal projects that showcase my skills and
+            the technologies that I use.
+          </p>
+          <div class="projects">
+            <div class="project m-1">
+              <a
+                href="https://abv-solutions.github.io/asp-dotnet-shop"
+                target="_blank"
+              >
+                <img src="img/online_shop.png" alt="Project" />
+                <div>
+                  <span class="lead">Online Shop</span>
+                  <a
+                    href="https://github.com/abv-solutions/asp-dotnet-shop"
+                    target="_blank"
+                    class="fab fa-github fa-2x"
+                  ></a>
+                </div>
+              </a>
+            </div>
+            <div class="project m-1">
+              <a
+                href="https://react-abv-solutions.firebaseapp.com"
+                target="_blank"
+              >
+                <img src="img/project_planner.png" alt="Project" />
+                <div>
+                  <span class="lead">Project Planner</span>
+                  <a
+                    href="https://github.com/abv-solutions/react-firebase"
+                    target="_blank"
+                    class="fab fa-github fa-2x"
+                  ></a>
+                </div>
+              </a>
+            </div>
+            <div class="project m-1">
+              <a
+                href="https://mern-above-solutions.herokuapp.com"
+                target="_blank"
+              >
+                <img src="img/shopping_list.png" alt="Project" />
+                <div>
+                  <span class="lead">Shopping List</span>
+                  <a
+                    href="https://github.com/abv-solutions/mern"
+                    target="_blank"
+                    class="fab fa-github fa-2x"
+                  ></a>
+                </div>
+              </a>
+            </div>
+            <div class="project m-1">
+              <a
+                href="https://abv-solutions.github.io/angular-spotify-api"
+                target="_blank"
+              >
+                <img src="img/music_finder.png" alt="Project" />
+                <div>
+                  <span class="lead">Music Finder</span>
+                  <a
+                    href="https://github.com/abv-solutions/angular-spotify-api"
+                    target="_blank"
+                    class="fab fa-github fa-2x"
+                  ></a>
+                </div>
+              </a>
+            </div>
+            <div class="project m-1">
+              <a
+                href="https://node-above-solutions.herokuapp.com"
+                target="_blank"
+              >
+                <img src="img/knowledge_point.png" alt="Project" />
+                <div>
+                  <span class="lead">Knowledge Point</span>
+                  <a
+                    href="https://github.com/abv-solutions/node-web"
+                    target="_blank"
+                    class="fab fa-github fa-2x"
+                  ></a>
+                </div>
+              </a>
+            </div>
+            <div class="project m-1">
+              <a href="https://blog-abv-solutions.netlify.app" target="_blank">
+                <img src="img/gatsby_blog.png" alt="Project" />
+                <div>
+                  <span class="lead">Blog</span>
+                  <a
+                    href="https://github.com/abv-solutions/gatsby-blog"
+                    target="_blank"
+                    class="fab fa-github fa-2x"
+                  ></a>
+                </div>
+              </a>
+            </div>
           </div>
-          <div class="form-group">
-            <input type="email" placeholder="Email Address" required />
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Phone number" required />
-          </div>
-          <div class="form-group">
-            <input type="text" placeholder="Company" />
-          </div>
-          <div class="form-group">
-            <textarea rows="2" placeholder="Your message" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-secondary mt-1">
-            <i class="fas fa-paper-plane pr-1"></i>Send message
-          </button>
-        </form>
-      </section>
+        </section>
+        <section id="call" class="pt-1 center mb-5">
+          <h1 class="x-large mb-1">Schedule a call</h1>
+          <p class="lead mb-1">
+            How about some free advice? Let's schedule a 15-minute free call. If
+            you are not sure what you need, this is the perfect opportunity to
+            find out more about your project and what it takes to complete it.
+          </p>
+          <p class="lead mb-1">
+            Ready? The next step is to contact you so we can set up a call or a
+            meeting at your convenience. Leave your email address and I will
+            take the time to explain my vision.
+          </p>
+          <form action="#" class="form mt-1">
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <button type="submit" class="btn btn-secondary">
+              <i class="fas fa-envelope pr-1"></i><span>Send</span>
+            </button>
+          </form>
+        </section>
+        <!-- Contact -->
+        <section id="contact" class="mb-2">
+          <h1 class="x-large my-1"><span class="dash"></span>Contact me</h1>
+          <p class="lead mb-1">
+            Already know what you need? Send me a message and I will get back to
+            you in no time!
+          </p>
+          <form action="#" class="form py-1">
+            <div class="form-group">
+              <input type="text" placeholder="Name" required />
+            </div>
+            <div class="form-group">
+              <input type="email" placeholder="Email Address" required />
+            </div>
+            <div class="form-group">
+              <textarea rows="3" placeholder="Your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-secondary mt-1">
+              <i class="fas fa-paper-plane pr-1"></i>Send message
+            </button>
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer id="footer" class="py-1">

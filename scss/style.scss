@@ -30,6 +30,20 @@ hr {
   opacity: 0.3;
 }
 
+section {
+  h1 {
+    position: relative;
+    .dash {
+      position: absolute;
+      top: -5%;
+      width: clamp(1.5rem, calc(2vw + 0.8rem), 3rem);
+      height: 6px;
+      border-radius: 3px;
+      background: $secondary-color;
+    }
+  }
+}
+
 .company {
   position: absolute;
   left: 0;
@@ -48,72 +62,83 @@ hr {
       font-size: clamp(1rem, calc(3vw + 0.3rem), 2rem);
       border-bottom: 0.05rem solid darken(set-text-color($control-color), 25);
     }
-    .lead {
+    .txt-type {
       font-size: clamp(0.8rem, calc(1.5vw + 0.4rem), 1.5rem);
       color: darken(set-text-color($control-color), 15);
       line-height: 1.8;
-    }
-    .txt-type > .txt {
-      border-right: 0.05rem solid darken($light-color, 50);
+      & > .txt {
+        border-right: 0.05rem solid darken($light-color, 50);
+      }
     }
   }
 }
-#showcase:after {
-  @include transitionF;
-  content: '';
-  height: 90vh;
-  width: 100%;
-  z-index: -1;
-  display: block;
-  @supports (background-blend-mode: multiply) {
-    background: linear-gradient(
-        0deg,
-        rgba($control-color, $background-opacity),
-        rgba($control-color, $background-opacity)
-      ),
-      $home-image no-repeat center center/cover;
-    background-blend-mode: multiply;
-    background-attachment: fixed;
-  }
-  filter: blur(12px);
-  -webkit-filter: blur(12px);
-}
-#showcase:hover {
+
+#showcase {
   &:after {
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-  }
-  .header {
-    .x-large {
-      filter: blur(3px);
-      -webkit-filter: blur(3px);
+    @include transitionF;
+    content: '';
+    height: 90vh;
+    width: 100%;
+    z-index: -1;
+    display: block;
+    @supports (background-blend-mode: multiply) {
+      background: linear-gradient(
+          0deg,
+          rgba($control-color, $background-opacity),
+          rgba($control-color, $background-opacity)
+        ),
+        $home-image no-repeat center center/cover;
+      background-blend-mode: multiply;
+      background-attachment: fixed;
     }
-    .medium {
-      filter: blur(2px);
-      -webkit-filter: blur(2px);
+    filter: blur(12px);
+    -webkit-filter: blur(12px);
+  }
+  &:hover {
+    &:after {
+      filter: blur(0px);
+      -webkit-filter: blur(0px);
+    }
+    .header {
+      .x-large {
+        filter: blur(3px);
+        -webkit-filter: blur(3px);
+      }
+      .medium {
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+      }
+    }
+  }
+  .showcase-content {
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    animation-name: animation;
+    animation-duration: 3s;
+    .header {
+      .x-large {
+        @include transitionF;
+        font-weight: bold;
+      }
+      .medium {
+        @include transitionF;
+        margin-top: clamp(1rem, calc(4.5vh + 0.3rem), 3rem);
+        margin-bottom: clamp(0.5rem, calc(2vw - 1rem), 1rem);
+      }
+    }
+    .btn-lead {
+      @include set-background(rgba($primary-color, 0.7));
+
+      margin-top: clamp(0.5rem, calc(20vh - 6rem), 3rem);
     }
   }
 }
-.showcase-content {
-  position: absolute;
-  width: clamp(16rem, 84vw, 70rem);
-  top: 30%;
-  left: 50%;
-  z-index: 1;
-  margin-left: clamp(-35rem, -42vw, -8rem);
-  animation-name: animation;
-  animation-duration: 3s;
-  .header {
-    .x-large {
-      @include transitionF;
-      font-weight: bold;
-    }
-    .medium {
-      @include transitionF;
-      margin-top: clamp(1rem, calc(4.5vh + 0.3rem), 3rem);
-    }
-  }
-}
+
 #keys {
   height: 10vh;
   display: grid;
@@ -121,7 +146,7 @@ hr {
   .key {
     display: flex;
     justify-content: center;
-    .lead {
+    p {
       font-size: clamp(1rem, calc(1.5vw + 0.4rem), 1.5rem);
       display: flex;
       align-items: center;
@@ -138,19 +163,107 @@ hr {
   }
 }
 
-.container section h1 {
-  position: relative;
-  .dash {
-    position: absolute;
-    top: -0.5rem;
-    width: clamp(1.5rem, calc(2vw + 0.8rem), 3rem);
-    height: 6px;
-    border-radius: 3px;
-    background: $secondary-color;
+#about {
+  .cost {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: clamp(10rem, calc(25vw + 3rem), 15rem);
+      opacity: 0.75;
+    }
+    .right {
+      padding-left: clamp(0rem, calc(4vw - 2rem), 2rem);
+      p {
+        max-width: clamp(20rem, calc(40vw + 3rem), 40rem);
+        font-size: clamp(1rem, calc(1vw + 0.3rem), 1.3rem);
+      }
+    }
   }
 }
 
-#about {
+.cost-img {
+  height: 30rem;
+  max-height: 70vh;
+  @supports (background-blend-mode: multiply) {
+    background: linear-gradient(
+        0deg,
+        rgba($control-color, $background-opacity),
+        rgba($control-color, $background-opacity)
+      ),
+      $hook-image no-repeat center center/cover;
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+  }
+}
+
+#services {
+  .hook {
+    position: relative;
+    width: 100%;
+    &:after {
+      content: '';
+      height: calc(40rem - clamp(0rem, 30vw, 10rem));
+      z-index: -1;
+      display: block;
+      background: linear-gradient(
+          0deg,
+          rgba($control-color, 1),
+          rgba(darken($control-color, 13), 0.9)
+        ),
+        url('../img/pattern-w.png') round;
+    }
+    &-content {
+      position: absolute;
+      height: 70%;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      .left {
+        padding: 0 clamp(1rem, 5vw, 3rem);
+        p {
+          line-height: 1.3;
+        }
+      }
+      .right {
+        padding-right: clamp(1rem, 5vw, 3rem);
+      }
+    }
+  }
+  .skills {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    .skill {
+      width: 20rem;
+      .lead {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  .steps {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    .step {
+      width: 20rem;
+      text-align: center;
+    }
+  }
+  .lead-gen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+      max-width: 45rem;
+    }
+  }
+}
+
+.info {
   .technologies {
     display: flex;
     flex-flow: wrap;
@@ -173,20 +286,8 @@ hr {
   }
 }
 
-#services {
-  .skills {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    .skill {
-      width: 20rem;
-      .lead {
-        display: flex;
-        align-items: center;
-      }
-    }
-  }
-  .work {
+#work {
+  .projects {
     display: flex;
     flex-flow: wrap;
     justify-content: center;

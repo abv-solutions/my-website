@@ -53,60 +53,41 @@
   border-radius: 10px;
   cursor: pointer;
   font-size: 1rem;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &-lead {
+    @extend .btn;
+    padding: 0.5rem 2rem;
+    font-size: clamp(1rem, calc(2vh + 0.4rem), 1.5rem);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    margin-top: 0.5rem;
+  }
   &-primary {
     @extend .btn;
     @include set-background($primary-color);
-    &:hover {
-      background: darken($primary-color, 10%);
-    }
   }
   &-secondary {
     @extend .btn;
     @include set-background($secondary-color);
-    &:hover {
-      background: darken($secondary-color, 10%);
-    }
   }
   &-dark {
     @extend .btn;
     @include set-background($dark-color);
-    &:hover {
-      background: darken($dark-color, 10%);
-    }
   }
   &-light {
     @extend .btn;
     @include set-background($light-color);
     font-weight: bold;
-    &:hover {
-      background: darken($light-color, 20%);
-    }
   }
   &-danger {
     @extend .btn;
     @include set-background($danger-color);
-    &:hover {
-      background: darken($danger-color, 10%);
-    }
   }
   &-success {
     @extend .btn;
     @include set-background($success-color);
-    &:hover {
-      background: darken($success-color, 10%);
-    }
-  }
-}
-
-.btn-lead {
-  @include set-background(rgba($primary-color, 0.7));
-  padding: 0.5rem 2rem;
-  font-size: clamp(1rem, calc(2vh + 0.4rem), 1.5rem);
-  font-weight: bold;
-  letter-spacing: 0.1rem;
-  margin-top: clamp(2rem, 10vh, 5rem);
-  &:hover {
-    transform: scale(1.1);
   }
 }
 
@@ -154,5 +135,8 @@ i {
   }
   &.fa-file-code {
     color: #813787;
+  }
+  &.fa-exclamation-triangle {
+    color: #ff9100;
   }
 }
