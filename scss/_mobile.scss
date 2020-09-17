@@ -88,6 +88,9 @@
     }
   }
   .info {
+    .lead {
+      text-align: left;
+    }
     .technologies {
       li {
         font-size: 1rem;
@@ -99,24 +102,31 @@
       }
     }
   }
+  #work {
+    .work-description {
+      text-align: left;
+    }
+  }
+  #call {
+    .call-content {
+      form {
+        button {
+          i {
+            padding: 0;
+          }
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   .form {
     input:focus,
     select:focus,
     textarea:focus {
       box-shadow: 0 1px 1px rgba(set-text-color($control-color), 0.1) inset,
         0 0 5px 1px rgba(set-text-color($control-color), 0.6);
-    }
-  }
-  #call {
-    form {
-      button {
-        i {
-          padding: 0;
-        }
-        span {
-          display: none;
-        }
-      }
     }
   }
 }
