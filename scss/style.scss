@@ -205,7 +205,6 @@ section {
     &:after {
       content: '';
       height: calc(40rem - clamp(0rem, 30vw, 10rem));
-      z-index: -1;
       display: block;
       background: linear-gradient(
           0deg,
@@ -224,6 +223,7 @@ section {
       .left {
         padding: 0 clamp(1rem, 5vw, 3rem);
         p {
+          white-space: nowrap;
           line-height: 1.3;
         }
       }
